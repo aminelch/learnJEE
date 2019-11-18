@@ -1,4 +1,4 @@
-package web;
+package metier;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -26,8 +26,10 @@ public class ControleurServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-	}
+//		response.getWriter().append("Served at: ").append(request.getContextPath());
+		request.getRequestDispatcher("VueSomme.jsp").forward(request,
+				response);
+		}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
